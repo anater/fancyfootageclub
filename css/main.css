@@ -554,7 +554,26 @@ th {
 	height: 100%;
 	background: rgb(52,56,66);
 	overflow: scroll;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
+	.download__container > *{
+		-webkit-box-flex: 0;
+		-webkit-flex: none;
+		    -ms-flex: none;
+		        flex: none;
+	}
 
 .download__curve--right{
 	display: block;
@@ -1659,10 +1678,19 @@ button,
 
 .popup{
 	position: fixed;
+	top: 0; left: 0;
 	width: 100%;
 	height: 100%;
-	top: 0; left: 0;
 	overflow: auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	background: #343842;
 	-webkit-transition: all .5s ease-out;
 	        transition: all .5s ease-out;
@@ -1674,10 +1702,22 @@ button,
 		        transform: translateY(-110%);
 	}
 
+.popup__header,
+.popup footer{
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	    -ms-flex: none;
+	        flex: none;
+}
+
 .popup__copy{
 	width: 60%;
 	min-width: 300px;
 	margin: 2em auto;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
 }
 	.popup__copy--hidden{
 		display: none;

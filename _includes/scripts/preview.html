@@ -125,8 +125,13 @@
       exitBtn = document.querySelector('.popup__exit'),
       popup = document.querySelector('.popup');
 
-  downloadBtn.addEventListener('click', showPopup);
-  purchaseBtn.addEventListener('click', showPopup);
+  if (downloadBtn){
+    downloadBtn.addEventListener('click', showPopup);
+  }
+  if (purchaseBtn){ 
+    purchaseBtn.addEventListener('click', showPopup);
+  }
+
   exitBtn.addEventListener('click', function(){
     popup.classList.add('popup--hidden');
   });
@@ -136,9 +141,11 @@
 
     if(this.id == 'download-button'){
       document.querySelector('.popup__download').classList.remove('popup__copy--hidden');
+      document.querySelector('.popup__purchase').classList.add('popup__copy--hidden');
     }
     else if(this.id == 'purchase-button'){
       document.querySelector('.popup__purchase').classList.remove('popup__copy--hidden');
+      document.querySelector('.popup__download').classList.add('popup__copy--hidden');
     }
   }
 </script>

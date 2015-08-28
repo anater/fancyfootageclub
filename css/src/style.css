@@ -123,7 +123,13 @@
 	height: 100%;
 	background: rgb(52,56,66);
 	overflow: scroll;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
+	.download__container > *{
+		flex: none;
+	}
 
 .download__curve--right{
 	display: block;
@@ -1192,10 +1198,12 @@ button,
 
 .popup{
 	position: fixed;
+	top: 0; left: 0;
 	width: 100%;
 	height: 100%;
-	top: 0; left: 0;
 	overflow: auto;
+	display: flex;
+	flex-direction: column;
 	background: #343842;
 	transition: all .5s ease-out;
 }
@@ -1204,10 +1212,16 @@ button,
 		transform: translateY(-110%);
 	}
 
+.popup__header,
+.popup footer{
+	flex: none;
+}
+
 .popup__copy{
 	width: 60%;
 	min-width: 300px;
 	margin: 2em auto;
+	flex: 1 0 auto;
 }
 	.popup__copy--hidden{
 		display: none;
