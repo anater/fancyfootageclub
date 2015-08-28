@@ -1,0 +1,14 @@
+---
+layout: post
+type: preview
+
+loop: ad
+sponsor: 001
+title: "Ink UI Kit"
+description: "Premium pack of over 120 high quality iOS screens"
+cta_text: "Get the kit!"
+ad_url: https://creativemarket.com/greatsimple/277249-Ink-UI-Kit-120-iOS-screens?u=kevin.halladay-glynn
+category: June
+
+is_ad: true
+---

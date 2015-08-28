@@ -1,0 +1,83 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+<script>
+	// switch bgvid with bgimg on mobile devices
+	var bg = document.getElementById("bg")
+	var vid = document.getElementById("preview-vid");
+	var poster = vid.getAttribute("poster");
+	var posterStyle = "background-image: url(" + poster + ");";
+	var html = document.getElementsByTagName("html")[0];
+	var body = document.getElementsByTagName("body")[0];
+
+	window.addEventListener("load", function(){
+	  if (Modernizr.touch) {
+	      body.setAttribute("class","no-bg");
+	      html.setAttribute("style",posterStyle);
+	      bg.removeChild(vid);
+	  }
+	  if(vid.paused){vid.play();}
+	});
+</script>
+<script>
+	var loadTrigger = document.getElementById('load-more-btn');
+	var offset = 6;
+
+	var request = new XMLHttpRequest();
+	request.open('GET', '/posts.json', true);
+
+	request.onload = function() {
+		if (request.status >= 200 && request.status < 400) {
+			// Success!
+			var data = JSON.parse(request.responseText);
+			var parent = document.querySelector('.collection__container');
+
+			loadTrigger.addEventListener('click', function(){
+				for (var i = offset; i < (offset + 6); i++) {
+					if (data[i]){ 
+						createItem(data[i], parent);
+					}
+					else {
+						loadTrigger.disabled = 'true';
+						loadTrigger.remove();
+						return;
+					}
+			    };
+			    offset+=6;
+			});
+		}
+		else {
+			// We reached our target server, but it returned an error
+			console.log('Error');
+		}
+	};
+
+	request.onerror = function() {
+		// There was a connection error of some sort
+		console.log('Connection error');
+	};
+
+	request.send();
+
+	function createItem(data, parent){
+		var newItem = document.createElement('li'),
+		    itemLink = document.createElement('a'),
+		    itemImg = document.createElement('img'),
+		    itemP = document.createElement('p');
+
+		if(data.is_ad != true){
+			newItem.classList.add('collection__item');
+		}else{
+			newItem.classList.add('collection__item', 'ad');
+			itemLink.target = "_blank";
+		}
+		itemLink.href = data.url;
+		itemImg.src = "{{ site.asseturl }}img/" + data.filename + "-small.jpg";
+		itemImg.onload = console.log('loaded');
+		itemP.innerHTML = "by " + data.name;
+
+		newItem.appendChild(itemLink);
+		itemLink.appendChild(itemImg);
+		itemLink.appendChild(itemP);
+
+		parent.appendChild(newItem);
+	}
+</script>

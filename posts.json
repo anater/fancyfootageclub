@@ -1,0 +1,20 @@
+---
+---
+[ 
+{% for post in site.posts %}
+	{% capture filename %}{{ post.date | date: "%Y-%m-%d" }}-{{ post.loop }}{% endcapture %}
+	{ 
+		{% if post.is_ad != true %}
+			"name": "{{ site.data.contributors[post.contributor].name }}",
+			"url": "{{ post.url }}",
+		{% else %}
+			"name": "{{ site.data.sponsors[post.sponsor].name }}",
+			"is_ad": true,
+			"url": "{{ post.ad_url }}",
+		{% endif %}
+		"filename": "{{ filename }}",
+		"category": "{{ post.category }}" 
+	}
+	{% unless forloop.last %},{% endunless %}
+{% endfor %} 
+]

@@ -1,0 +1,9 @@
+{% if page.type == 'preview' %}
+  {% include scripts/preview.html %}
+{% else %}
+  {% include scripts/default.html %}
+{% endif %}
+
+{% include scripts/typekit.html %}
+{% include scripts/analytics.html %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">

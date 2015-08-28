@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: coin
+contributor: 015
+location: "Nebraska"
+tags: coin quarter money spinning slow-motion
+category: July
+---

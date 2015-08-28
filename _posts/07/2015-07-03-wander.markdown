@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: wander
+contributor: 004
+location: "Mount Whitney Portal"
+tags: nature outdoors wander relax explore
+category: July
+---

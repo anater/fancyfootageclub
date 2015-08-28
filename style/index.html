@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+
+		<title>CSS Style & Brand Guide - Fancy Footage Club</title>
+
+		<link rel="stylesheet" href="../css/normalize.css"/>
+		<link rel="stylesheet" href="../css/style-main.css"/>
+
+		<script src="//use.typekit.net/vzk4zqq.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+	</head>
+	<body>
+	<div class="container">
+	  
+		<h1 class="wordmark">Fancy Footage Club</h1>
+
+		<p>Hi, this is the style & brand guide we follow at FFC</p> 
+
+		<!-- Typography -->
+		<h2>Typography</h2>
+
+		<p>All text is set in <strong>Proxima Nova</strong> with font-smoothing: antialised.</p>
+
+		<p>The base font-size is 20px, with a line-height of 1.45.</p>
+
+		<p>Links don't have a text-decoration: underline, but a border-bottom instead, with a slightly more transparent version of the color of the text (see color section).</p>
+
+		<div class="example">
+			<h1>h1. Page Title</h1>
+			<p>An example paragraph with <strong>strong text</strong>, <em>emphasized text</em> and <a href="#">a link</a>, spanning multiple lines so you can see the line-height.</p>
+
+			<h2>h2. Section Heading</h2>
+			<p>An example paragraph with <strong>strong text</strong> and <em>emphasized text</em>, spanning multiple lines so you can see the line-height.</p>
+
+			<h3>h3. Sub-title</h3>
+			<p class="hushed">An example paragraph with the muted class. It has <strong>strong text</strong> and <em>emphasized text</em>, spanning multiple lines so you can see the line-height.</p>
+
+			<h4>h4. Sub-heading 1</h4>
+			<p>An example paragraph with <strong>strong text</strong> and <em>emphasized text</em>, spanning multiple lines so you can see the line-height.</p>
+
+			<h5>h5. Sub-heading 2</h5>
+			<p>An example paragraph with <strong>strong text</strong> and <em>emphasized text</em>, spanning multiple lines so you can see the line-height.</p>
+
+			<h6>h6. Sub-heading 3</h6>
+			<p>An example paragraph with <strong>strong text</strong> and <em>emphasized text</em>, spanning multiple lines so you can see the line-height.</p>
+		</div>
+
+		<!-- Color -->
+		<h2>Color</h2>
+		<p>Never use full black, instead opt for #333 or maybe even a tinted grey. There are two accent colors: <span class="primary">primary for main actions</span> and <span class="secondary">secondary for other actions</span>.</p>
+		<p>Basic <a href="#">text links</a> use the secondary color.</p>
+		<div class="example">
+			<ul class="colors black">
+				<li class="bg-black muted">Black</li>
+				<li class="bg-muted">Muted</li>
+				<li class="bg-primary">Primary</li>
+				<li class="bg-secondary">Secondary</li>
+			</ul>
+		</div>
+
+		<!-- Form -->
+		<h2>Form elements</h2>
+		<form action="#" class="example">
+			<div class="input-container">
+				<label for="text1">Input</label>
+				<input type="text" name="name" id="text1" placeholder="Placeholder" />
+			</div>
+			<div class="input-container input-container--valid">
+				<label for="text2">Valid input</label>
+				<input type="text" name="name" id="text2" placeholder="Placeholder" />
+			</div>
+			<div class="input-container input-container--error">
+				<label for="text3">Invalid input</label>
+				<input type="text" name="name" id="text3" placeholder="Placeholder" />
+			</div>
+
+			<fieldset>
+				<legend>Radio</legend>
+				<div class="option-container">
+					<input type="radio" name="radio" id="radio1" />
+					<label for="radio1">Option one</label>
+				</div>
+				<div class="option-container">
+					<input type="radio" name="radio" id="radio2" />
+					<label for="radio2">Option two</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Checkbox</legend>
+				<div class="option-container">
+					<input type="checkbox" name="option[]" id="option1" />
+					<label for="option1">Option one</label>
+				</div>
+				<div class="option-container">
+					<input type="checkbox" name="option[]" id="option2" />
+					<label for="option2">Option two</label>
+				</div>
+			</fieldset>
+		</form>
+
+		<!-- Buttons -->
+		<h2>Buttons</h2>
+		<p>All buttons have a disabled (opacity: .5) state.</p>
+		<div class="example">
+			<p>
+				<button>Default button</button>
+				<button class="btn-disabled">Default disabled button</button>
+			</p>
+			<p>
+				<button class="btn-secondary">Secondary button</button>
+				<button class="btn-secondary btn-disabled">Secondary button disabled</button>
+			</p>
+			<p>
+				<button class="btn-muted">Muted button</button>
+				<button class="btn-muted btn-disabled">Muted button disabled</button>
+			</p>
+		</div>
+
+		<h2>Alerts</h2>
+		<p>Alerts are used for system messages to the user.</p>
+		<div class="example">
+			<p class="alert">This is a <strong>neutral alert</strong>.<a href="#" class="alert_close">&times;</a></p>
+			<p class="alert alert-success">This is a <strong>success alert</strong>. <a href="#" class="alert_close">&times;</a></p>
+			<p class="alert alert-error muted">This is an <strong>error alert</strong>. <a href="#" class="alert_close">&times;</a></p>
+		</div>
+
+	</div><!-- end .container -->
+	</body>
+</html>

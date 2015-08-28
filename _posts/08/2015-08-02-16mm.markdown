@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: 16mm
+contributor: 001
+location: "The Road"
+tags: 16mm nostalgia california vacation
+category: August
+---

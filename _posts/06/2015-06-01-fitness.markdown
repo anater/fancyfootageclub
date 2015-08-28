@@ -1,0 +1,12 @@
+---
+layout: post
+type: preview
+
+loop: fitness
+contributor: 011
+location: "Baldwin Hills, L.A."
+tags: fitness workout running jumping climbing
+category: June
+
+purchasable: false
+---

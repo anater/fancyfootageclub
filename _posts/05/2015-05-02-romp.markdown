@@ -1,0 +1,12 @@
+---
+layout: post
+type: preview
+
+loop: romp
+contributor: 009
+location: "Laguna Beach, CA"
+tags: family child playing beach happy
+category: May
+
+purchasable: false
+---

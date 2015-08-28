@@ -1,0 +1,14 @@
+---
+layout: post
+type: preview
+
+loop: ad
+sponsor: 001
+title: "Fonts, Graphics, Themes, and More"
+description: "A platform for handcrafted, mousemade design content from independent creatives around the world."
+cta_text: "Check it out!"
+ad_url: https://creativemarket.com/?u=kevin.halladay-glynn
+category: February
+
+is_ad: true
+---

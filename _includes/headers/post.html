@@ -1,0 +1,8 @@
+{% capture filename %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.loop }}{% endcapture %}
+<div id="bg" class="bg" style="background-image: url('{{ site.asseturl }}img/{{ filename }}-poster.jpg');">
+	<video id="preview-vid" poster="{{ site.asseturl }}img/{{ filename }}-poster.jpg" autoplay muted loop>
+		<source src="{{ site.asseturl }}vid/{{ filename }}.mp4" type="video/mp4"></source>
+		<source src="{{ site.asseturl }}vid/{{ filename }}.webm" type="video/webm"></source>
+	</video>
+</div>
+<progress id='bgVidProgress' class="vid__loading-bar" max='100' value='0'></progress>

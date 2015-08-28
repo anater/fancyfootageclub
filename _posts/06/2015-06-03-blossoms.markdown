@@ -1,0 +1,12 @@
+---
+layout: post
+type: preview
+
+loop: blossoms
+contributor: 003
+location: "Cherry Blossom Tree"
+tags: blossoms tree nature pink
+category: June
+
+purchasable: false
+---

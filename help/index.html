@@ -1,0 +1,50 @@
+---
+layout: default
+title: "Get the answers to all your fancy questions - Help"
+loop: home
+---
+
+<main>
+	<article>
+		<header class="headline">
+			<div class="headline__text v-center">
+				<h1>
+					We're Here to Help
+				</h1>
+				<h3>
+					Below you will find answers to frequently asked questions and 
+					<span>contact info for any other important questions you may have for our team.</span>
+				</h3>
+			</div>
+		</header>
+		
+		<section class="faq">
+			<div class="top-curve bg-dark"></div>
+			<div class="bg-dark">
+				<div class="container">
+					<h2>Frequently Asked Questions</h2>
+					<div class="faq__txt">
+						<ul>
+							{% for faq in site.data.faq %}
+								<li>
+									<h4>{{ faq.q }}</h4>
+									<p>{{ faq.a }}</p>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-curve bg-dark"></div>
+		</section>
+		
+		<section class="cta cta--small">
+			<p class="v-center">
+				Couldn't find an answer to your question? Email us:
+				<a href="mailto:help@fancyfootage.club" class="huge">
+					help@fancyfootage.club
+				</a>
+			</p>
+		</section>
+	</article>
+</main>

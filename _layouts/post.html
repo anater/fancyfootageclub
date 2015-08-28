@@ -1,0 +1,119 @@
+---
+layout: default
+---
+
+{% assign contributor = site.data.contributors[page.contributor] %}
+{% assign sponsor = site.data.sponsors[page.sponsor] %}
+{% capture filename %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.loop }}{% endcapture %}
+
+{% if page.is_ad != true %}
+	<main class="download is-off-screen" id="main-js">
+{% else %}
+	<main class="download is-off-screen is-ad" id="main-js">
+{% endif %}
+	<div class="download__container">
+		<header>
+			<h1 class="logo">
+				<a href="/">
+					<img alt="Fancy Footage Club" src="{{ site.asseturl }}img/ffc_logo.svg"/>
+				</a>
+			</h1>
+		</header>
+		<section id="download-js">
+			<div class="download__meta">
+				{% if page.is_ad != true %}
+					<h2 class="download__author">
+						<a href="{{ contributor.url }}">{{ contributor.name }}</a>
+					</h2>
+					<p class="download__location">
+						{{ page.location }}
+					</p>
+					<p class="download__tags">
+						{% for tag in page.tags %}
+							#{{ tag }}
+						{% endfor %}
+					</p>
+				{% else %}
+					<h2 class="download__author">
+						<a href="{{ page.ad_url }}" target="_blank">{{ page.title }}</a>
+					</h2>
+					<p class="download__location">
+						{{ sponsor.name }}
+					</p>
+					<p class="download__tags">
+						{{ page.description }}
+					</p>
+				{% endif %}
+			</div>
+			{% if page.is_ad != true %}
+				<div class="download__buttons">
+					{% if page.purchasable != false %}
+						<a class="button button-full" id="purchase-button" href="https://gum.co/{{ filename }}" target="_blank" onclick="ga('send', 'event', 'link', 'click', 'purchase-{{ filename }}');">
+							Purchase
+						</a>
+						<p>or</p>
+					{% endif %}
+					<a class="button button-muted button-full" id="download-button"  href="{{ site.dlurl }}{{ filename }}.zip" onclick="ga('send', 'event', 'dl', 'dl', 'dl-{{ filename }}');">
+						Download
+					</a>
+				</div>
+				{% if page.purchasable != false %}
+					<aside class="download__info is-hidden">
+						<h3 class="info__heading center">
+							<span href="#" class="info__trigger--on" data-influence="download__buttons">
+								What's the difference?
+							</span>
+						</h3>
+						<div class="info__block">
+							<span class="info__subheading info__subheading--primary">Purchase</span> ($30)
+							<ul class="info__list">
+								<li>Royalty-free</li>
+								<li>Full resolution loop</li>
+								<li>Additional / alternative clips</li>
+							</ul>
+						</div>
+						<div class="info__block">
+							<span class="info__subheading">Download</span> (Free)
+							<ul class="info__list">
+								<li>Artist credit required</li>
+								<li>Web-optimized loop</li>
+							</ul>
+						</div>
+						<span href="#" class="info__trigger--off" data-influence="download__buttons">
+							Okay, I understand
+						</span>
+					</aside>
+				{% endif %}
+			{% else %}
+				<div class="download__buttons">
+					<a class="button button-full" target="_blank" href="{{ page.ad_url }}" onclick="ga('send', 'event', 'ad', 'click', '{{ filename }}');">
+						{{ page.cta_text }}
+					</a>
+				</div>
+			{% endif %}
+		</section>
+		<aside class="download__info is-hidden">
+			<h3 class="info__heading">
+				<span href="" class="info__trigger--on">
+					Keyboard Shortcuts
+				</span>
+			</h3>
+			<ul class="info__list--plain">
+				<li><span>→</span>next loop</li>
+				<li><span>←</span>previous loop</li>
+				<li><span>L</span>go to library</li>
+				<li><span>I</span>toggle information</li>
+			</ul>
+			<span href="" class="info__trigger--off">
+				Okay, I understand
+			</span>
+		</aside>
+		{% include components/footer-small.html %}
+	</div>
+	{% include components/page-nav.html %}
+	<div class="download__curve--right">
+	</div>
+</main>
+{% include components/post-purchase.html %}
+
+

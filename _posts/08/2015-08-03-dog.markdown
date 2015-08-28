@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: dog
+contributor: 014
+location: "Dog Park, Los Angeles"
+tags: dog animal panting sky
+category: August
+---

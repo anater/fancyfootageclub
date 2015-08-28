@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: ferris
+contributor: 010
+location: "Santa Monica Pier, L.A."
+tags: lights nighttime bokeh ferriswheel
+category: May
+---

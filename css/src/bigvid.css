@@ -1,0 +1,67 @@
+html{
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body.no-bg{
+  background: none;
+}
+
+.bg{
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+video{
+  display: none;
+}
+
+.bgvid {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow: hidden;
+  z-index: -9999;
+}
+
+.bgvid > video {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 1. No object-fit support: */
+@media (min-aspect-ratio: 16/9) {
+	.bgvid > video { 
+		height: 400%; 
+		top: -150%; 
+	}
+}
+@media (max-aspect-ratio: 16/9) {
+	.bgvid > video { 
+		width: 400%; 
+		left: -150%;
+	}
+}
+
+@media screen{
+	.bgvid > video{
+
+	}
+}
+
+
+@supports (object-fit: cover) {
+  .bgvid > video {
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+}

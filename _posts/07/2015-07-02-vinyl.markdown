@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: vinyl
+contributor: 016
+location: "Granpa's Basement, 1964"
+tags: vinyl record music spinning 
+category: July
+---

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+  	{% if page.type == 'preview' %}
+    	{% include headers/post.html %}
+    {% else %}
+    	{% include headers/default.html %}
+    {% endif %}
+
+    {{ content }}
+
+    {% if page.type != 'preview' %}
+      {% include components/footer-full.html %}
+    {% endif %}
+  </body>
+  {% include scripts/main.html %}
+</html>

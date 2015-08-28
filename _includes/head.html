@@ -1,0 +1,32 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>
+		{% if page.type == 'preview' %}
+			{% if page.is_ad != true %}
+				{{ page.loop | capitalize }} by {{site.data.contributors[page.contributor].name}} - {{ site.title }}
+			{% else %}
+				Sponsored by {{site.data.sponsors[page.sponsor].name}} - {{ site.title }}
+			{% endif %}
+		{% else %}
+			{% if page.title %}
+				{{ page.title }} - {{ site.title }}
+			{% else %}
+				{{ site.title }}
+			{% endif %}
+		{% endif %}
+	</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+	<link rel="stylesheet" href="{{ '/css/main.min.css' | prepend: site.baseurl }}">
+
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+	<!-- FAVICONS -->
+	<link rel="icon" type="image/x-icon" href="https://s3.amazonaws.com/fancyfootage.club/assets/img/favions/favicon2.ico" />
+	<link rel="icon" type="image/gif" href="https://s3.amazonaws.com/fancyfootage.club/assets/img/favions/favicon-animated3.gif" />
+	<link href="https://s3.amazonaws.com/fancyfootage.club/assets/img/favions/apple-touch-icon-144.gif" rel="apple-touch-icon-precomposed" sizes="144x144" type="image/png" />
+    <link href="https://s3.amazonaws.com/fancyfootage.club/assets/img/favions/apple-touch-icon-114.gif" rel="apple-touch-icon-precomposed" sizes="114x114" type="image/png" />
+    <link href="https://s3.amazonaws.com/fancyfootage.club/assets/img/favions/apple-touch-icon-72.gif" rel="apple-touch-icon-precomposed" sizes="72x72" type="image/png" />
+</head>

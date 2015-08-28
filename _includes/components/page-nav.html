@@ -1,0 +1,15 @@
+<div class="controls">
+	<a class="close-btn open"><i class="fa fa-times"></i></a>
+	<nav class="page-nav">
+	{% if page.previous %}
+		<a href="{{ page.previous.url }}" class="page-nav__prev" onclick="ga('send', 'event', 'link', 'click', 'prev');">
+			<i class="fa fa-chevron-left"></i>
+		</a>
+	{% endif %}
+	{% if page.next %}
+		<a href="{{ page.next.url }}" class="page-nav__next" onclick="ga('send', 'event', 'link', 'click', 'next');">
+			 <i class="fa fa-chevron-right"></i> 
+		</a>
+	{% endif %}
+	</nav>
+</div>

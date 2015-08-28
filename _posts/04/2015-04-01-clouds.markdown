@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: clouds
+contributor: 001
+location: "Windells Camp, Oregon"
+tags: clouds mountains timelapse sky
+category: April
+---

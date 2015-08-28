@@ -1,0 +1,59 @@
+---
+layout: default
+title: "Looping, royalty-free videos for your next design project - Welcome"
+loop: home
+---
+{% assign month = site.data.collection.month %}
+<main>
+	<article>
+		<header class="headline">
+			<div class="headline__text v-center">
+				<h1>
+					Looping, royalty-free videos 
+					<span>for your next design project.</span>
+				</h1>
+			</div>
+		</header>
+		<section class="collection" id="library">
+			<div class="top-curve bg-dark"></div>
+			<div class="collection__main bg-dark">
+				<h2>
+					{{ month | capitalize }}'s Free Collection
+				</h2>
+				<ul class="collection__container">
+					{% for post in site.categories[month] %}
+						{% capture filename %}{{ post.date | date: "%Y-%m-%d" }}-{{ post.loop }}{% endcapture %}
+						{% if post.url %}
+							{% if post.is_ad != true %}
+							<li class="collection__item" onclick="ga('send', 'event', 'clip', 'click', '{{ filename }}');">
+								<a href="{{ post.url }}">
+				  					<img src="{{ site.asseturl }}img/{{ filename }}-small.jpg">
+				  					<p>by {{ site.data.contributors[post.contributor].name }}</p>
+				 				</a>
+							</li>
+							{% else %}
+							<li class="collection__item ad" onclick="ga('send', 'event', 'ad', 'click', '{{ filename }}');">
+								<a href="{{ post.ad_url }}" target="_blank">
+				  					<img src="{{ site.asseturl }}img/{{ filename }}-small.jpg">
+				  					<p>by {{ site.data.sponsors[post.sponsor].name }}</p>
+				 				</a>
+							</li>
+							{% endif %}
+						{% endif %}
+					{% endfor %}
+			   	</ul>
+			   	<button class="button-muted button-center" id="load-more-btn">
+			   		Show More Loops
+			   	</button>			
+			</div>
+			<div class="bottom-curve bg-dark"></div>
+		</section>
+		<section class="form-container">
+			<div class="v-center">
+				<p>5 new videos in your inbox. Every month. For free.</p>
+				{% include components/subscribe-form.html %}
+			</div>
+		</section>
+	</article>
+</main>
+

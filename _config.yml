@@ -1,0 +1,22 @@
+# Site settings
+title: Fancy Footage Club
+email: admin@fancyfootage.club
+description: 'Fancy Footage Club provides designers with beautiful, looping, royalty-free footage for their next website'
+baseurl: ""
+dlurl: "https://s3.amazonaws.com/fancyfootageclips/loops/"
+asseturl: "https://s3.amazonaws.com/fancyfootageclips/website/"
+url: "http://fancyfootage.club" 
+
+exclude: ['css/src', 'package.json', '/node_modules', 'gruntfile.js', 'npm-debug.log']
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values: 
+      permalink: library/:year/:month/:title
+
+# Build settings
+markdown: kramdown
+sass_dir: css/_sass
