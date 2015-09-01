@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: smoke
+contributor: 020
+location: "The Dark Room"
+tags: 'smoke smokey clouds b&w'
+category: September
+---

@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: fire
+contributor: 020
+location: "🔥🔥🔥"
+tags: fire flame hot spicy
+category: September
+---

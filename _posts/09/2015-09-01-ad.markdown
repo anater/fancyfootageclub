@@ -1,0 +1,14 @@
+---
+layout: post
+type: preview
+
+loop: ad
+sponsor: 003
+title: "Sponsor this page!"
+description: "Get in front of an engaged, international audience of designers, developers, marketers, and videographers."
+cta_text: "Get in touch!"
+ad_url: mailto:sponsor@fancyfootage.club
+category: September
+
+is_ad: true
+---
