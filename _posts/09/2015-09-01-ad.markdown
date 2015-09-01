@@ -3,11 +3,11 @@ layout: post
 type: preview
 
 loop: ad
-sponsor: 003
-title: "Sponsor this page!"
-description: "Get in front of an engaged, international audience of designers, developers, marketers, and videographers."
-cta_text: "Get in touch!"
-ad_url: mailto:sponsor@fancyfootage.club
+sponsor: 002
+title: "Free Design Checklist"
+description: "Every startup needs design. Make sure you don't forget what's important."
+cta_text: "Get the checklist!"
+ad_url: http://starter.design/checklist
 category: September
 
 is_ad: true
