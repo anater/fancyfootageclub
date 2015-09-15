@@ -3,11 +3,11 @@ layout: post
 type: preview
 
 loop: ad
-sponsor: 002
-title: "Free Design Checklist"
-description: "Every startup needs design. Make sure you don't forget what's important."
-cta_text: "Get the checklist!"
-ad_url: http://starter.design/checklist
+sponsor: 003
+title: "Sponsor a Collection!"
+description: "Get in front of highly engaged designers, developers, filmmakers, and marketers from around the world."
+cta_text: "Learn about sponsorships!"
+ad_url: /sponsor
 category: September
 
 is_ad: true

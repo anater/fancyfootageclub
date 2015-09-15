@@ -7,9 +7,11 @@ layout: default
 {% capture filename %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.loop }}{% endcapture %}
 
 {% if page.is_ad != true %}
-	<main class="download is-off-screen" id="main-js">
+<main class="download is-off-screen" id="main-js">
 {% else %}
-	<main class="download is-off-screen is-ad" id="main-js">
+<a href='{{ page.ad_url }}' class="ad__link--full">
+</a>
+<main class="download is-ad" id="main-js">
 {% endif %}
 	<div class="download__container">
 		<header>

@@ -669,6 +669,12 @@ th {
 	margin-top: .5em;
 }
 
+.ad__link--full{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
+
 .vid__loading-bar[value]{
 	display: block;
 	position: fixed;
