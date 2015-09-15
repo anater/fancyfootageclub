@@ -1036,6 +1036,11 @@ section .container{
 		}
 	}
 
+.landing-page__intro{
+	text-align: center;
+	padding-bottom: 3rem; 
+}
+
 .landing-page ul{
 	margin-top: 1em;
 }
