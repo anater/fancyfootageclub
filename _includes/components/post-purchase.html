@@ -7,22 +7,9 @@
 		</h1>
 	</header>
 	<div class="popup__copy">
-		<div class="popup__download popup__copy--hidden">
-			<h2>Thanks for downloading!</h2>
-			<p>
-				Quick reminder about our free footage:
-				<ul>
-					<li>You <strong>must credit <a href="{{ contributor.url }}">{{ contributor.name }}</a></strong> wherever you use the footage</li>
-					<li>The <strong>footage is web-optimized</strong>, meaning its great for load times, but not for video projects</li>
-				</ul>
-				If you want to get more out of this footage, we offer the full-quality files with additional clips for purchase.
-			</p>
-			<a class="button button-center popup__cta" href="https://gum.co/{{ filename }}?wanted=true" onclick="ga('send', 'event', 'link', 'click', 'popup-purchase-{{ filename }}');">
-				Purchase
-			</a>
-		</div>
-		<div class="popup__purchase popup__copy--hidden">
-			<h2>Thanks for purchasing!</h2>
+		<div >
+			<h2 class="popup__purchase popup__copy--hidden">Thanks for purchasing!</h2>
+			<h2 class="popup__download popup__copy--hidden">Thanks for downloading!</h2>
 			<p class="center-text">
 				Want More Loops? Get 5 free videos in your inbox. Every month.
 			</p>
