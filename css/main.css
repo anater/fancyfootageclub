@@ -553,7 +553,8 @@ th {
 	width: 80%;
 	height: 100%;
 	background: rgb(52,56,66);
-	overflow: scroll;
+	overflow: -moz-scrollbars-none;
+	overflow-y: scroll;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -567,12 +568,16 @@ th {
 	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	-ms-overflow-style: none;
 }
 	.download__container > *{
 		-webkit-box-flex: 0;
 		-webkit-flex: none;
 		    -ms-flex: none;
 		        flex: none;
+	}
+	.download__container::-webkit-scrollbar {
+		display: none;
 	}
 
 .download__curve--right{
