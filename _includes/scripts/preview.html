@@ -23,7 +23,7 @@
 </script>
 <script>
   // info controls
-  var triggerOn = document.querySelectorAll('.info__trigger--on'),
+  var triggerOn = document.querySelectorAll('.download__info'),
       buttons = document.querySelector('.download__buttons');
 
   for (var i = 0; i < triggerOn.length; i++) {
@@ -31,24 +31,28 @@
   };
 
   function show(){
-    var parent = this.parentNode.parentNode,
+    var parent = this,
         influence = this.getAttribute('data-influence');
 
     parent.classList.remove('is-hidden');
-    parent.querySelector('.info__trigger--off').addEventListener('click', hide);
+    parent.removeEventListener('click', show);
+    parent.addEventListener('click', hide);
     if(influence == 'download__buttons'){
       document.querySelector('.' + influence).classList.add('is-hidden');
     }
   }
 
   function hide(){
-    var parent = this.parentNode,
+    var parent = this,
         influence = this.getAttribute('data-influence');
 
     parent.classList.add('is-hidden');
     if(influence == 'download__buttons'){
       document.querySelector('.' + influence).classList.remove('is-hidden');
     }
+
+    parent.removeEventListener('click', hide);
+    parent.addEventListener('click', show);
   }
 </script>
 <script>
