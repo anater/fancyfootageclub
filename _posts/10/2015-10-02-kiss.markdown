@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: kiss
+contributor: 006
+location: "Le Cinema"
+tags: kissing romance movies dark
+category: October
+---

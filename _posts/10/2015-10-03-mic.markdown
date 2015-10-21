@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: mic
+contributor: 004
+location: "Open Mic Night"
+tags: stage microphone lights
+category: October
+---

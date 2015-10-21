@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: rocks
+contributor: 007
+location: "Cabo San Lucas"
+tags: rocks ocean beachline waves water
+category: October
+---
