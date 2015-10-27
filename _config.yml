@@ -1,7 +1,7 @@
 # Site settings
 title: Fancy Footage Club
 email: admin@fancyfootage.club
-description: 'Fancy Footage Club provides designers with beautiful, looping, royalty-free footage for their next website'
+description: 'Fancy Footage Club curates cinema-quality footage for creative projects of every size'
 baseurl: ""
 dlurl: "https://s3.amazonaws.com/fancyfootageclips/loops/"
 asseturl: "https://s3.amazonaws.com/fancyfootageclips/website/"
