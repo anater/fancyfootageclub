@@ -11,9 +11,12 @@
 			<h2 class="popup__purchase popup__copy--hidden">Thanks for purchasing!</h2>
 			<h2 class="popup__download popup__copy--hidden">Thanks for downloading!</h2>
 			<p class="center-text">
-				Want More Loops? Get bonus footage in your inbox every month.
+				We announce new footage and share creative resources on Twitter.
 			</p>
-			{% include components/subscribe-form.html %}
+			<script src="https://platform.twitter.com/widgets.js"></script>
+			<a class="button button-secondary" href="https://twitter.com/intent/follow?screen_name=@fancyfootage" onclick="ga('send', 'event', 'ex-link', 'click', 'twitter - popup');">
+				Follow Fancy Footage Club on Twitter!
+			</a>
 		</div>
 
 		<a class="popup__exit" onclick="ga('send', 'event', 'link', 'click', 'popup-exit');">
