@@ -81,3 +81,15 @@
 		parent.appendChild(newItem);
 	}
 </script>
+<script>
+	var form = document.getElementById("mc-embedded-subscribe-form");
+
+	form.addEventListener('submit', function(event) {
+	  event.preventDefault();
+	  ga('send', 'event', 'newsletter', 'submit', {
+	    hitCallback: function() {
+	      form.submit();
+	    }
+	  });
+	});
+</script>
