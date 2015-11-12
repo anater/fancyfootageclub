@@ -1,0 +1,12 @@
+---
+layout: post
+type: preview
+
+loop: keyboard
+contributor: 013
+location: "Burning The Midnight Oil"
+tags: "laptop keyboard hands typing"
+category: November
+
+purchasable: false
+---

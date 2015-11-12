@@ -55,7 +55,7 @@ layout: default
 						</a>
 						<p>or</p>
 					{% endif %}
-					<a class="button button-muted button-full" id="download-button" href="{{ site.dlurl }}{{ filename }}.zip">
+					<a class="button button-muted button-full" id="download-button" href="{{ site.dlurl }}{{ filename }}.zip" download onclick="ga('send', 'event', 'loop', 'dl', 'dl-{{ filename }}');">
 						Download
 					</a>
 				</div>

@@ -1,0 +1,12 @@
+---
+layout: post
+type: preview
+
+loop: bridge
+contributor: 014
+location: "Golden Gate Bridge, SF"
+tags: "bridge water boats sky clouds"
+category: November
+
+purchasable: false
+---

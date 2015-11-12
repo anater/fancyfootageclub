@@ -20,16 +20,17 @@
     vid.addEventListener('progress', function() {
       progress.value = Math.round((this.buffered.end(0) / this.duration) * 100);
     });
+  });
 
-    vid.addEventListener("seeked", function(){
+  vid.addEventListener("seeked", function(){
       loopCount++;
     });
 
-    dlButton.addEventListener("click", function(){
-      var vidCompletion = vid.currentTime / vid.duration;
-      var plays = +vidCompletion.toFixed(2) + loopCount;
-      ga('send', 'event', 'Loops', 'DL', '{{ filename }}', plays);
-    });
+  dlButton.addEventListener("click", function(){
+    var vidCompletion = vid.currentTime / vid.duration;
+    var plays = +vidCompletion.toFixed(2) + loopCount;
+    ga('send', 'event', 'loop', 'count', '{{ filename }}', plays);
+    console.log(plays);
   });
 
 </script>

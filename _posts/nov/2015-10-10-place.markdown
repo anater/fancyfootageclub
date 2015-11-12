@@ -1,0 +1,12 @@
+---
+layout: post
+type: preview
+
+loop: place
+contributor: 011
+location: "Field of Dreams"
+tags: "outdoor nature warm walking"
+category: November
+
+purchasable: false
+---
