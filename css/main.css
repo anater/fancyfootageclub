@@ -839,6 +839,35 @@ header{
 	margin-top: 1.5em;
 }
 
+.banner{
+	padding: 5rem 0;
+}
+
+.banner__text h1,
+.banner__text h3{
+	text-shadow: 0 1px 5px rgba(0,0,0,.2);
+}
+
+.banner__text h3{
+	font-style: normal;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	margin-top: 1.5em;
+}
+
+.banner__text h1 > strong{
+	color: #efcd0d;
+}
+
+.banner__text .button{
+	margin-top: 1.5em;
+}
+
+.form-container--small{
+	text-align: center;
+	padding-bottom: 5rem;
+}
+
 .menu-container{
 	position: absolute;
 	top: 0;
