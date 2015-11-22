@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<main>
+	<article class="banner">
+		<div class="banner__text">
+			<h1>Win <strong>$200</strong> for your <span>absolutely excellent footage.</span></h1>
+			<h3>{{page.subtitle}}</h3>
+			<button class="button button-secondary">
+				Submit Your {{page.theme}} Footage!
+			</button>
+			<p class="hushed">
+				<strong>Theme</strong>: {{page.theme}}<br>
+				<strong>Deadline</strong>: {{page.deadline}}<br>
+				<strong>Requirements</strong>: Under 15 seconds. Under 100mb<br><br>
+				<strong><a href="/help">Learn More</a></strong>
+			</p>
+		</div>
+		<section class="cta--sentence">
+	  		<p>
+	  			Follow us on <a href="http://instagram.com/fancyfootageclub" target="_blank">Instagram</a> for updates and announcements.
+	  		</p>
+		</section>
+	</article>
+</main>
+
+<section class="popup popup--long popup--hidden">
+	<header class="popup__header">
+		<h1 class="logo">
+			<a href="/">
+				<img alt="Fancy Footage Club" src="{{ site.asseturl }}img/ffc_logotype.svg"/>
+			</a>
+		</h1>
+	</header>
+	<div class="popup__copy popup__hidden">
+		<div>
+			<h2 class="popup__download">Submit Your Footage!</h2>
+			<p class="center-text">
+				<strong>Theme</strong>: {{page.theme}}<br>
+				<strong>Deadline</strong>: {{page.deadline}}<br>
+				<strong>Requirements</strong>: Under 15 seconds. Under 100mb<br><br> 
+
+				Footage is uploaded via Dropbox (but you don’t need an account :) Every submission that is included in next month’s collection will receive a minimum prize of $50. The most popular loop will receive $200. 
+				<a href="/help">Any Questions?</a>
+			</p>
+		</div>
+
+		<div>
+			<form class="form--wide">
+				<p>
+					<label for="name">Name *</label>
+					<input id="name" type="text" placeholder="Fancy Footage Club" required>
+				</p>
+				<p>
+					<label for="email">Contact Email *</label>
+					<input id="email" type="email" placeholder="info@fancyfootage.club" required>
+				</p>
+				<p>
+					<label for="sites">
+						Want to link to outside sites? Share up to three promotional links alongside your footage
+					</label>
+					<input id="site1" type="url" value="http://instagram.com/">
+					<input id="site1" type="url" value="http://twitter.com/">
+					<input id="site1" type="url" placeholder="http://fancyfootage.club/">
+				</p>
+				<input type="submit" value="Submit & Proceed to Dropbox">
+			</form>
+			<p class="hushed center-text">
+				* indicates a required field.<br><br>
+				Any footage that doesn’t meet the above requirements will not be accepted for the collection.<br>
+				Any and all uploaded footage can be distributed at any time as outlined in our <a href="http://fancyfootage.club/legal/termsofuse.pdf">Terms of Use</a>.
+			</p>
+		</div>
+
+		<a class="popup__exit">
+			Close 
+		</a>
+	</div>
+	{% include components/footer-full.html %}
+</section>
+
+

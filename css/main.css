@@ -841,6 +841,7 @@ header{
 
 .banner{
 	padding: 5rem 0;
+	text-align: center;
 }
 
 .banner__text h1,
@@ -1012,6 +1013,18 @@ section .container{
 	.cta--small{
 		height: 50vh;
 		min-height: 10em;
+	}
+
+	.cta--sentence{
+		text-align: center;
+		padding: 2rem;
+		font-size: 1.25em;
+	}
+
+	.cta--sentence a{
+		font-weight: bold;
+		padding-bottom: .1em;
+		border-bottom: 2px solid;
 	}
 
 .form-container p{
@@ -1336,7 +1349,7 @@ h1 + p {
   -webkit-transition: .5s ease;
           transition: .5s ease;
 }
-	footer.hushed:hover{
+	.hushed:hover{
 		opacity: 1;
 	}
 
@@ -1607,13 +1620,33 @@ input + label{
 
 .option-container {
   position: relative;
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
 }
 
+.form--wide{
+	text-align: center;
+}
+
+.form--wide label{
+	font-size: .9em;
+	opacity: .5;
+	margin: 2em 0 1em;
+}
+
+.form--wide input{
+	width: 100%;
+	text-align: center;
+}
+
+.form--wide input + input{
+	margin-top: 1em;
+}
 
 
 /* Buttons */
 button,
+input[type="submit"],
 .button {
 	background: #efcd0d;
 	color: #343842;
@@ -1630,6 +1663,7 @@ button,
 	        transition: 0.5s ease;
 }
 	button:not(.button-disabled):hover,
+	input[type="submit"]:not(.button-disabled):hover,
 	.button:not(.button-disabled):hover {
 		color: inherit;
 	    background: rgba(255, 219, 14, 0.70);
@@ -1727,6 +1761,7 @@ button,
 	width: 100%;
 	height: 100%;
 	overflow: auto;
+	z-index: 100;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -1768,6 +1803,10 @@ button,
 		display: none;
 	}
 
+	.popup__copy a{
+		font-weight: bold;
+	}
+
 .popup h2{
 	text-align: center;
 	margin-bottom: .5em;
@@ -1784,6 +1823,12 @@ button,
 	font-size: .75em;
 	cursor: pointer;
 }
+
+	.popup--long .popup__exit{
+		position: fixed;
+		top: 2rem;
+		right: 2rem;
+	}
 
 .popup .feature__form{
 	width: 60%;

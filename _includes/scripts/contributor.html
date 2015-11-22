@@ -1,0 +1,13 @@
+<script>
+	var button = document.querySelector('.button-secondary');
+	var popup = document.querySelector('.popup');
+	var exitPopup = popup.querySelector('.popup__exit');
+
+	button.addEventListener('click', function(){
+		popup.classList.remove('popup--hidden');
+
+		exitPopup.addEventListener('click', function(){
+			popup.classList.add('popup--hidden');
+		})
+	});
+</script>
