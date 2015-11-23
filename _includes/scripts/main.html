@@ -1,9 +1,9 @@
 {% if page.type == 'preview' %}
-  {% include scripts/preview.html %}
+	{% include scripts/preview.html %}
 {% elsif page.type == 'contributor' %}
 	{% include scripts/contributor.html %}
 {% else %}
-  {% include scripts/default.html %}
+	{% include scripts/default.html %}
 {% endif %}
 
 {% include scripts/typekit.html %}

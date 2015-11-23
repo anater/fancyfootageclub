@@ -2,12 +2,17 @@
 	var button = document.querySelector('.button-secondary');
 	var popup = document.querySelector('.popup');
 	var exitPopup = popup.querySelector('.popup__exit');
+	var body = document.querySelector('body');
 
-	button.addEventListener('click', function(){
-		popup.classList.remove('popup--hidden');
+	window.addEventListener('load',function(){
+		button.addEventListener('click', function(){
+			body.classList.add('noscroll');
+			popup.classList.remove('popup--hidden');
 
-		exitPopup.addEventListener('click', function(){
-			popup.classList.add('popup--hidden');
-		})
+			exitPopup.addEventListener('click', function(){
+				body.classList.remove('noscroll');
+				popup.classList.add('popup--hidden');
+			})
+		});
 	});
 </script>
