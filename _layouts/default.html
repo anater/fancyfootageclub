@@ -2,9 +2,7 @@
 <html>
   {% include head.html %}
   <body>
-  	{% if page.type == 'preview' %}
-    	{% include headers/post.html %}
-    {% else %}
+  	{% if page.type != 'preview' %}
     	{% include headers/default.html %}
     {% endif %}
 

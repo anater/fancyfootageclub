@@ -1,6 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
 <script>
-  // switch bgvid with bgimg on mobile devices
+  /*
   var vid = document.getElementById("preview-vid");
   var progress = document.getElementById("bgVidProgress");
   var meta = document.querySelector(".download__meta");
@@ -31,46 +31,40 @@
     var plays = +vidCompletion.toFixed(2) + loopCount;
     ga('send', 'event', 'loop', 'count', '{{ filename }}', plays);
     console.log(plays);
+  });*/
+
+  var previewLinks = document.querySelector('.preview__nav').querySelectorAll('div');
+  var previewHeader = document.querySelector('.preview__header');
+  var previewArtist = document.querySelector('.preview__artist');
+  var previewDownload = document.querySelector('.preview__download');
+  var previewElements = [previewHeader, previewArtist, previewDownload];
+  
+  for (var i = 0; i < previewLinks.length; i++) {
+    previewLinks[i].addEventListener('mouseover',function(){
+      for (var i = 0; i < previewElements.length; i++) {
+        previewElements[i].classList.add('hidden');
+      };
+    });
+    previewLinks[i].addEventListener('mouseout',function(){
+      for (var i = 0; i < previewElements.length; i++) {
+          previewElements[i].classList.remove('hidden');
+      };
+    });
+  };
+
+  var vid = document.getElementById("preview-vid");
+  var progress = document.getElementById("bgVidProgress");
+
+  window.addEventListener("load", function(){
+    vid.addEventListener('progress', function(){
+      progress.value = Math.round((this.buffered.end(0) / this.duration) * 100);
+    });
   });
 
 </script>
 <script>
-  // info controls
-  var triggerOn = document.querySelectorAll('.download__info'),
-      buttons = document.querySelector('.download__buttons');
-
-  for (var i = 0; i < triggerOn.length; i++) {
-    triggerOn[i].addEventListener('click', show);
-  };
-
-  function show(){
-    var parent = this,
-        influence = this.getAttribute('data-influence');
-
-    parent.classList.remove('is-hidden');
-    parent.removeEventListener('click', show);
-    parent.addEventListener('click', hide);
-    if(influence == 'download__buttons'){
-      document.querySelector('.' + influence).classList.add('is-hidden');
-    }
-  }
-
-  function hide(){
-    var parent = this,
-        influence = this.getAttribute('data-influence');
-
-    parent.classList.add('is-hidden');
-    if(influence == 'download__buttons'){
-      document.querySelector('.' + influence).classList.remove('is-hidden');
-    }
-
-    parent.removeEventListener('click', hide);
-    parent.addEventListener('click', show);
-  }
-</script>
-<script>
   // interface pane controls
-
+  /*
   var closeBtn = document.querySelector(".close-btn");
   var pane = document.getElementById("main-js");
 
@@ -102,7 +96,7 @@
       sessionStorage.setItem('off-screen', 'true');
     }
   }
-
+  
   document.addEventListener('keydown', checkKey);
   
   function checkKey(e) {
@@ -134,9 +128,11 @@
       window.location.href = '/#library';
     }
   }
+  */
 </script>
 <script>
   // display post-purchase overlay
+  /*
   var downloadBtn = document.querySelector('#download-button'),
       purchaseBtn = document.querySelector('#purchase-button'),
       exitBtn = document.querySelector('.popup__exit'),
@@ -165,4 +161,5 @@
       document.querySelector('.popup__download').classList.add('popup__copy--hidden');
     }
   }
+  */
 </script>
