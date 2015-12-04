@@ -1,0 +1,12 @@
+---
+layout: post
+type: preview
+
+loop: wire
+contributor: 022
+location: "Brooklyn Bridge, NYC"
+tags: bridge architecture steel wire sky
+category: December
+
+purchasable: false
+---

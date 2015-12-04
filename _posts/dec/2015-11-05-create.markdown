@@ -1,0 +1,12 @@
+---
+layout: post
+type: preview
+
+loop: create
+contributor: 022
+location: "Los Angeles, CA"
+tags: desk drawing photography indoors
+category: December
+
+purchasable: false
+---

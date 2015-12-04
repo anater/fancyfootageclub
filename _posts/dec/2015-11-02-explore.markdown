@@ -1,0 +1,12 @@
+---
+layout: post
+type: preview
+
+loop: explore
+contributor: 022
+location: "Grand Teton National Park, Wyoming"
+tags: nature woods trees mountains
+category: December
+
+purchasable: false
+---
