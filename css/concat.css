@@ -1882,7 +1882,6 @@ img{
 /*** New Styles (Organize ME!!!!) ***/
 
 .preview{
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -2148,8 +2147,8 @@ progress[value]::-moz-progress-bar{
 
 .preview__nav a,
 .preview__download a{
-	min-width: 7rem;
 	width: 40%;
+	min-width: 5rem;
 	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 	margin-top: 1em;
 }
@@ -2157,24 +2156,29 @@ progress[value]::-moz-progress-bar{
 		.no-touch .preview__nav a{
 			position: absolute;
 			bottom: 50%;
-			width: 100%;
+			width: 70%;
+			margin: 0 auto;
 			padding: .5rem;
 			background: none;
 			box-shadow: none;
 			text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 			color: white;
+			border: .25rem solid transparent;
+			border-radius: .5rem;
+			font-size: 2.5rem;
 		}
 			.no-touch .preview__nav a:hover{
 				background: none;
 				color: white;
+				border-color: white;
 			}
 
 		.no-touch .preview__nav .prev a{
-			left: 0;	
+			left: 2rem;	
 		}
 
 		.no-touch .preview__nav .next a{
-			right: 0;
+			right: 2rem;
 		}
 	}
 
