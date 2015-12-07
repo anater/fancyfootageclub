@@ -1306,7 +1306,7 @@ h1 + p {
   opacity: .5;
   transition: .5s ease;
 }
-	.hushed:hover{
+	footer.hushed{
 		opacity: 1;
 	}
 
@@ -1845,9 +1845,6 @@ img{
 	footer{
 		text-align: center;
 	}
-		footer.hushed{
-			opacity: 1;
-		}
 
 	.footer-left, .footer-right{
 		float: none;
@@ -2136,13 +2133,17 @@ progress[value]::-moz-progress-bar{
 
 		.no-touch .preview__nav .prev{
 			left: 0;
-			background: linear-gradient(to right, #343842, rgba(52, 56, 66, 0));
 		}
+			.no-touch .preview__nav .prev:hover{
+				background: linear-gradient(to right, #343842, rgba(52, 56, 66, 0));
+			}
 
 		.no-touch .preview__nav .next{
 			right: 0;
-			background: linear-gradient(to left, #343842, rgba(52, 56, 66, 0));
 		}
+			.no-touch .preview__nav .next:hover{
+				background: linear-gradient(to left, #343842, rgba(52, 56, 66, 0));
+			}
 	}
 
 .preview__nav a,
