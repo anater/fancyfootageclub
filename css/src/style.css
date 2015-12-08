@@ -344,7 +344,7 @@ progress[value]::-moz-progress-bar{
 	}
 }
 
-.v-center{
+/*.v-center{
 	position: relative;
   	top: 50%;
   	overflow: hidden;
@@ -357,27 +357,21 @@ progress[value]::-moz-progress-bar{
 	}
 	.lightbox.v-center{
 		top: calc(50% + 5vh);
-	}
+	}*/
 
 header{
 	text-align: center;
 }
 
 .headline{
-	height: 50vh;
-	min-height: 15em;
-}
-	.headline--small{
-		height: 30vh;
-		min-height: 10em;
-	}
-
-.headline__text{
-	top: 35%;
+	padding: 3rem;
+	padding-bottom: 5rem;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .headline__text h3{
-	margin-top: .5em;
+	margin-top: 1em;
+	font-size: 1.5rem;
 }
 
 .headline__text p{
@@ -388,7 +382,7 @@ header{
 }
 
 .banner{
-	padding: 5rem 0;
+	padding: 3rem 0;
 	text-align: center;
 }
 
@@ -398,18 +392,14 @@ header{
 }
 
 .banner__text h3{
+	width: 75%;
 	font-style: normal;
-	text-transform: uppercase;
-	letter-spacing: .15em;
-	margin-top: 1.5em;
+	font-size: 1.5em;
+	margin: 1.5em auto;
 }
 
 .banner__text h1 > strong{
 	color: #efcd0d;
-}
-
-.banner__text .button{
-	margin-top: 1.5em;
 }
 
 .form-container--small{
@@ -539,28 +529,18 @@ section .container{
 .form-container,
 .cta{
 	text-align: center;
-	position: relative;
-	height: 80vh;
-	min-height: 20em;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+	padding: 5rem;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 }
-	.cta--small{
-		height: 50vh;
-		min-height: 10em;
-	}
 
 	.cta--sentence{
 		text-align: center;
-		padding: 2rem;
+		padding-top: 3rem;
 		font-size: 1.25em;
 	}
 
 	.cta--sentence a{
 		font-weight: bold;
-		padding-bottom: .1em;
-		border-bottom: 2px solid;
 	}
 
 .form-container p{
@@ -811,6 +791,7 @@ h1 {
 	margin: 0 auto;
 }
 	h1 span,
+	h2 span,
 	h3 span{
 		display: block;
 	}
@@ -838,7 +819,6 @@ h6 {
 
 h3, h6{
 	font-weight: 200;
-	font-style: italic;
 }
 
 p {
@@ -876,10 +856,15 @@ h1 + p {
 
 .hushed {
   font-size: .75em;
-  opacity: .5;
   transition: .5s ease;
 }
-	footer.hushed{
+
+.hushed > *{
+	opacity: .5;
+}
+
+	footer.hushed > *,
+	.hushed a:hover{
 		opacity: 1;
 	}
 
@@ -1105,6 +1090,7 @@ textarea {
 	input:focus,
 	textarea:focus{
 		opacity: 1;
+		color: black;
 	}
 
 input{
@@ -1168,6 +1154,19 @@ input + label{
 
 .form--wide input + input{
 	margin-top: 1em;
+}
+
+.form__input{
+	position: relative;
+}
+
+.form__in-label{
+	position: absolute;
+	top: .8em;
+	top: calc(50% - .5em);
+	left: 1em;
+	color: black;
+	opacity: .25;
 }
 
 
@@ -1304,7 +1303,8 @@ input[type="submit"],
 
 .popup__copy{
 	width: 60%;
-	min-width: 300px;
+	min-width: 15em;
+	max-width: 35em;
 	margin: 2em auto;
 	flex: 1 0 auto;
 }
@@ -1318,7 +1318,7 @@ input[type="submit"],
 
 .popup h2{
 	text-align: center;
-	margin-bottom: .5em;
+	margin-bottom: 1em;
 }
 
 .popup__cta{
@@ -1328,8 +1328,8 @@ input[type="submit"],
 .popup__exit{
 	display: block;
 	text-align: center;
-	margin: 1em 0;
-	font-size: .75em;
+	padding: 1rem;
+	font-size: 1.25em;
 	cursor: pointer;
 }
 
@@ -1366,6 +1366,7 @@ img{
 
 @media screen and (max-width: 800px){
 	h1 span,
+	h2 span,
 	h3 span{
 		display: inline;
 	}
@@ -1797,6 +1798,11 @@ progress[value]::-moz-progress-bar{
 
 .no-touch .preview footer{
 	display: none;
+}
+
+.contribute__main p,
+.contribute__main button{
+	margin-top: 1.5em;
 }
 
 
