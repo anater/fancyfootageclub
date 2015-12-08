@@ -15,4 +15,15 @@
 			})
 		});
 	});
+
+	var form = document.getElementById("mc-embedded-subscribe-form");
+
+	form.addEventListener('submit', function(event) {
+	  event.preventDefault();
+	  ga('send', 'event', 'contributor', 'submit', {
+	    hitCallback: function() {
+	      form.submit();
+	    }
+	  });
+	});
 </script>

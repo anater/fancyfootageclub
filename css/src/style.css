@@ -364,8 +364,7 @@ header{
 }
 
 .headline{
-	padding: 3rem;
-	padding-bottom: 5rem;
+	padding: 5rem 1rem 7rem;
 	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -529,13 +528,12 @@ section .container{
 .form-container,
 .cta{
 	text-align: center;
-	padding: 5rem;
+	padding: 5rem 1rem 3rem;
 	text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 }
 
 	.cta--sentence{
 		text-align: center;
-		padding-top: 3rem;
 		font-size: 1.25em;
 	}
 
@@ -1302,7 +1300,7 @@ input[type="submit"],
 }
 
 .popup__copy{
-	width: 60%;
+	width: 90%;
 	min-width: 15em;
 	max-width: 35em;
 	margin: 2em auto;
@@ -1329,14 +1327,14 @@ input[type="submit"],
 	display: block;
 	text-align: center;
 	padding: 1rem;
-	font-size: 1.25em;
+	font-size: 2rem;
 	cursor: pointer;
 }
 
 	.popup--long .popup__exit{
 		position: fixed;
-		top: 2rem;
-		right: 2rem;
+		top: 1rem;
+		right: 1rem;
 	}
 
 .popup .feature__form{
@@ -1408,12 +1406,17 @@ img{
 	}
 
 	h1{
-		font-size: 2em;
+		font-size: 1.75rem;
 		line-height: 1.25em;
 	}
 
 	h2{
-		font-size: 1.5em;
+		font-size: 1.5rem;
+	}
+
+	h3,
+	.headline__text h3{
+		font-size: 1rem;
 	}
 
 	footer{
@@ -1435,7 +1438,7 @@ img{
 
 	.headline,
 	.form-container{
-		height: 40vh;
+		padding: 2em .5em 3em;
 	}
 
 	.feature section{
@@ -1800,11 +1803,22 @@ progress[value]::-moz-progress-bar{
 	display: none;
 }
 
-.contribute__main p,
-.contribute__main button{
-	margin-top: 1.5em;
+.contribute__main .container{
+	padding: 1rem 0;
 }
 
+.contribute__main p,
+.contribute__main button{
+	margin-top: 2rem;
+	margin-bottom: 0;
+}
 
+	.contribute__main p:last-child{
+		margin-top: 1rem;
+	}
+
+.contribute__main a{
+	font-weight: bold;
+}
 
 

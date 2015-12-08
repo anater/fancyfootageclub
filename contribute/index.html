@@ -35,12 +35,12 @@ loop: thankyou
 						<strong>Length</strong>: Under 15 seconds<br>
 						<strong>Size</strong>: Under 100mb
 					</p>
+					<button class="button button-primary" id="formTrigger" onclick="ga('send', 'event', 'contribute', 'click', 'trigger-form');">
+						Submit Your {{page.theme}} Footage!
+					</button>
 					<p class="hushed">
 						<a href="/help">What does great footage look like?</a>
 					</p>
-					<button class="button button-primary" id="formTrigger">
-						Submit Your {{page.theme}} Footage!
-					</button>
 				</div>
 			</div>
 			<div class="bottom-curve bg-dark"></div>
@@ -49,7 +49,7 @@ loop: thankyou
 		<section class="cta">
 			<p class="cta--sentence">
 				Follow us on Instagram for updates and announcements:
-				<a href="http://instagram.com/fancyfootageclub" class="huge" target="_blank">
+				<a href="http://instagram.com/fancyfootageclub" class="huge" target="_blank" onclick="ga('send', 'event', 'social', 'ex-click', 'ig');">
 					@fancyfootageclub
 				</a>
 			</p>
