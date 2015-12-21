@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Get the answers to all your fancy questions - Help"
+title: "Get the answers to all your questions - Help"
 loop: home
 ---
 
@@ -9,7 +9,7 @@ loop: home
 		<header class="headline">
 			<div class="headline__text v-center">
 				<h1>
-					We're Here to Help
+					FAQ
 				</h1>
 				<h3>
 					Below you will find answers to frequently asked questions and 
@@ -22,15 +22,60 @@ loop: home
 			<div class="top-curve bg-dark"></div>
 			<div class="bg-dark">
 				<div class="container">
-					<h2>Frequently Asked Questions</h2>
+					<h2 id="everyone">Everyone</h2>
 					<div class="faq__txt">
 						<ul>
-							{% for faq in site.data.faq %}
-								<li>
-									<h4>{{ faq.q }}</h4>
-									<p>{{ faq.a }}</p>
-								</li>
-							{% endfor %}
+							<li>
+								<h4>When are new loops added?</h4>
+								<p>Collections containing 5 new loops are emailed on the 8th of each month. The website updates that day too :) You can follow us on <a href="http://instagram/fancyfootageclub" target="_blank">Instagram</a> or <a href="http://twitter.com/fancyfootage">Twitter</a> for a quick ping when new footage becomes available.</p>
+							</li>
+							<li>
+								<h4>Can I use these loops for free?</h4>
+								<p>Yes! The footage is free to use. However, you may not re-sell the footage, host it on another stock footage site, or claim the work as your own. See our <a href="http://fancyfootage.club/legal/termsofuse.pdf" target="_blank">Terms of Use</a> for more details.</p>
+							</li>
+							<li>
+								<h4>I’m having trouble using these loops on my site. Any suggestions?</h4>
+								<p>There’s a <a href="http://fvsch.com/code/video-background/" target="_blank">great guide from Florent Verschelde</a> that lays video implementation out nicely.</p>
+							</li>
+							<li>
+								<h4>I can’t find the footage I’m looking for. Any suggestions?</h4>
+								<p>If you found something similar to what you need but it’s not perfect, reach out to the artist - they often have alternate cuts and extra footage! Clicking an artist’s name on any preview page will allow you to email them directly.</p>
+							</li>
+						</ul>
+					</div>
+					<h2 id="contributors">Contributors</h2>
+					<div class="faq__txt">
+						<ul>
+							<li>
+								<h4>How can I have my work featured on Fancy Footage Club?</h4>
+								<p>Our footage loops are curated, meaning that we do not feature every edit that is submitted, but any creative that has video work can submit! On the 15th of each month we announce a theme and <a href="/contribute" target="_blank">open up submissions</a>. The submission period ends at the end of the month and the featured loops are released one week later. Good Luck!</p>
+							</li>
+							<li>
+								<h4>I need some time to work on my loop, but I feel like I’m going to forget about the deadline. Any way I can get reminders?</h4>
+								<p>Of course! For updates on themes and reminders about deadlines, you can follow us on <a href="http://instagram.com/fancyfootageclub" target="_blank">Instagram</a> or <a href="http://twitter.com/fancyfootage" target="_blank">Twitter</a>.</p>
+							</li>
+							<li id="quality">
+								<h4>How do you decide which loops to feature in a collection?</h4>
+								<p>
+									There are a number of things we look at when evaluating footage:
+									<ol>
+										<li><b>Specs</b>: Right away we get rid of footage that is longer than 15 seconds or larger than 100mb. </li> 
+										<li><b>Quality</b>: Is the footage shot well? Colored well? Did the artist spend time on the edit? </li>
+										<li><b>Relevance</b>: Does this footage go with the theme? Could we imagine a professional finding this footage useful?</li> 
+										<li><b>Style</b>: We try to share work that is unique and highlights the artist’s skill and style. So before you upload, ask yourself: Is this a good representation of my work?</li> 
+										<li><b>Looping</b>: On the site and in most promotions your footage will be looping. If it looks good when looping, that’s a plus!</li>
+									</ol>
+									In a nutshell: You have 15 seconds. Make them outstanding! Check out our <a href="/#library">library</a> to see the type of work we’ve chosen to share in the past.
+								</p>
+							</li>
+							<li>
+								<h4>If my loop is featured, how does payment work?</h4>
+								<p>We give featured artists a one time payment of $50 when their work is shared in a collection! This payment is made via Square Cash. If your work is selected to be featured, someone from our team will reach out to organize payment.</p>
+							</li>
+							<li>
+								<h4>Can I change the links or information displayed alongside my footage?</h4>
+								<p>Certainly! You can simply send a change request email to <a href="mailto:help@fancyfootage.club?Subject=Contributor%20Info%20Change%20Request">help@fancyfootage.club</a> and we’ll have your information updated within 48 hours.</p>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -38,8 +83,8 @@ loop: home
 			<div class="bottom-curve bg-dark"></div>
 		</section>
 		
-		<section class="cta cta--small">
-			<p class="v-center">
+		<section class="cta">
+			<p class="cta--sentence">
 				Couldn't find an answer to your question? Email us:
 				<a href="mailto:help@fancyfootage.club" class="huge">
 					help@fancyfootage.club

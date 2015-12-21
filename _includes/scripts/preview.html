@@ -1,38 +1,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
 <script>
-  /*
-  var vid = document.getElementById("preview-vid");
-  var progress = document.getElementById("bgVidProgress");
-  var meta = document.querySelector(".download__meta");
-  var dlButton = document.querySelector("#download-button");
-  var loopCount = 0;
-
-  window.addEventListener("load", function(){
-    if (Modernizr.touch) {
-        meta.appendChild(vid);
-        vid.classList.add('download__video');
-        document.querySelector('.controls').style.display = 'none';
-    }
-    else{
-      bg.classList.remove("bg");
-      bg.classList.add("bgvid");
-    }
-    vid.addEventListener('progress', function() {
-      progress.value = Math.round((this.buffered.end(0) / this.duration) * 100);
-    });
-  });
-
-  vid.addEventListener("seeked", function(){
-      loopCount++;
-    });
-
-  dlButton.addEventListener("click", function(){
-    var vidCompletion = vid.currentTime / vid.duration;
-    var plays = +vidCompletion.toFixed(2) + loopCount;
-    ga('send', 'event', 'loop', 'count', '{{ filename }}', plays);
-    console.log(plays);
-  });*/
-
   var previewLinks = document.querySelector('.preview__nav').querySelectorAll('div');
   var previewHeader = document.querySelector('.preview__header');
   var previewArtist = document.querySelector('.preview__artist');
@@ -63,46 +30,15 @@
 
 </script>
 <script>
-  // interface pane controls
-  /*
-  var closeBtn = document.querySelector(".close-btn");
-  var pane = document.getElementById("main-js");
-
-  if(sessionStorage.getItem('off-screen')){
-    var offScreen = sessionStorage.getItem('off-screen');
-    if(offScreen == 'true' || pane.classList.contains('is-ad')){
-      toggleOffScreen(true);
-    }
-  }else{
-    toggleOffScreen();
-  }
-
-  closeBtn.addEventListener('click', toggleOffScreen);
-
-  function toggleOffScreen(isOffScreen) {
-    pane.classList.toggle('is-off-screen');
-    closeBtn.classList.toggle('open');
-    if(isOffScreen != true){
-      toggleStorage();
-    }
-  }
-
-  function toggleStorage() {
-    var offScreen = sessionStorage.getItem('off-screen');
-    if(offScreen == 'true'){
-      sessionStorage.setItem('off-screen', 'false');
-    }
-    else{
-      sessionStorage.setItem('off-screen', 'true');
-    }
-  }
-  
+  {% capture filename %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.loop }}{% endcapture %}
   document.addEventListener('keydown', checkKey);
   
   function checkKey(e) {
     e = e || window.event;
     prevLink = '{{ page.previous.url }}';
-    nextLink = '{{ page.next.url }}'
+    nextLink = '{{ page.next.url }}';
+    downloadLink = '{{ site.dlurl }}{{ filename }}.zip';
+
     if (e.keyCode == '37') {
        // left arrow
       if(prevLink != ''){
@@ -117,49 +53,15 @@
         window.location.href = nextLink;
       }
     }
-    else if (e.keyCode == '73') {
-      // 'I' key
-      ga('send', 'event', 'link', 'key', 'toggleOffScreen');
-      toggleOffScreen();
+    else if (e.keyCode == '40') {
+      // down arrow
+      ga('send', 'event', 'loop', 'dl', 'dl-{{ filename }}');
+      window.location.href = downloadLink;
     }
-    else if (e.keyCode == '76') {
-      // 'L' key
+    else if (e.keyCode == '38') {
+      // up arrow
       ga('send', 'event', 'link', 'key', 'library');
       window.location.href = '/#library';
     }
   }
-  */
-</script>
-<script>
-  // display post-purchase overlay
-  /*
-  var downloadBtn = document.querySelector('#download-button'),
-      purchaseBtn = document.querySelector('#purchase-button'),
-      exitBtn = document.querySelector('.popup__exit'),
-      popup = document.querySelector('.popup');
-
-  if (downloadBtn){
-    downloadBtn.addEventListener('click', showPopup);
-  }
-  if (purchaseBtn){ 
-    purchaseBtn.addEventListener('click', showPopup);
-  }
-
-  exitBtn.addEventListener('click', function(){
-    popup.classList.add('popup--hidden');
-  });
-
-  function showPopup(){
-    popup.classList.remove('popup--hidden');
-
-    if(this.id == 'download-button'){
-      document.querySelector('.popup__download').classList.remove('popup__copy--hidden');
-      document.querySelector('.popup__purchase').classList.add('popup__copy--hidden');
-    }
-    else if(this.id == 'purchase-button'){
-      document.querySelector('.popup__purchase').classList.remove('popup__copy--hidden');
-      document.querySelector('.popup__download').classList.add('popup__copy--hidden');
-    }
-  }
-  */
 </script>

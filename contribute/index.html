@@ -6,7 +6,7 @@ loop: thankyou
 
 month: January
 theme: Celebration
-theme-ex: "🎉 🙌 🎁"
+theme-ex: "🎉 🙌 🍻"
 deadline: "December 31, 2015"
 loop: thankyou
 ---
@@ -16,10 +16,10 @@ loop: thankyou
 		<header class="headline">
 			<div class="headline__text">
 				<h1>
-					We believe artists should <span>be paid for their work.</span>
+					We believe you should <span>be paid for your footage.</span>
 				</h1>
 				<h3>
-					You’ll earn cash and direct exposure to thousands of creatives <span>when you’re work is featured in our library.</span>
+					You’ll earn cash and direct exposure to thousands of creatives <span>when your footage is featured in our library.</span>
 				</h3>
 			</div>
 		</header>
@@ -27,20 +27,32 @@ loop: thankyou
 		<section class="contribute__main">
 			<div class="top-curve bg-dark"></div>
 			<div class="bg-dark">
-				<div class="container center-text">
-					<h2>For {{page.month}}'s Collection:</h2>
+				<div class="container">
+					<h2 class="center-text">How It Works</h2>
+					<p>Fancy Footage Club features snippets of footage from excellent video artists and shares their work with thousands of designers, filmmakers, marketers, and entrepreneurs. We feature 5 footage loops every month - purchased at $50 -  in order to maximize exposure to the artists. The goal is to give artists a space to try something new or promote outstanding work that would otherwise live on the cutting room floor.</p>
+				</div>
+				<div class="container">
+					<div class="center-text">
+						<h2>{{page.month}}'s Theme Is {{page.theme}}</h2>
+						<br>
+						<p class="emoji">
+							{{page.theme-ex}}
+						</p>
+					</div>
 					<p>
-						<strong>Theme</strong>: {{page.theme}} (think: {{page.theme-ex}})<br>
-						<strong>Deadline</strong>: {{page.deadline}}<br>
-						<strong>Length</strong>: Under 15 seconds<br>
-						<strong>Size</strong>: Under 100mb
+						We’ve been around for one year! So, we felt it was only appropriate to make our first open submission theme <em>celebration</em>. We’re hoping to highlight the excitement, joy, and endless possibility of a new year. Bring your camera to a bumpin’ party or dive into a dusty hard drive for that perfect shot. Can’t wait to see what you come up with! 
 					</p>
-					<button class="button button-primary" id="formTrigger" onclick="ga('send', 'event', 'contribute', 'click', 'trigger-form');">
-						Submit Your {{page.theme}} Footage!
-					</button>
-					<p class="hushed">
-						<a href="/help">What does great footage look like?</a>
-					</p>
+					<div class="center-text">	
+						<button class="button button-primary" id="formTrigger" onclick="ga('send', 'event', 'contribute', 'click', 'trigger-form');">
+							Submit Your {{page.theme}} Footage!
+						</button>
+						<p>
+							Submission period ends on {{page.deadline}}.
+						</p>
+						<p class="hushed">
+							<a href="/help#quality">What does great footage look like?</a>
+						</p>
+					</div>
 				</div>
 			</div>
 			<div class="bottom-curve bg-dark"></div>
@@ -48,9 +60,9 @@ loop: thankyou
 		
 		<section class="cta">
 			<p class="cta--sentence">
-				Follow us on Instagram for updates and announcements:
-				<a href="http://instagram.com/fancyfootageclub" class="huge" target="_blank" onclick="ga('send', 'event', 'social', 'ex-click', 'ig');">
-					@fancyfootageclub
+				Follow us on Twitter for updates and announcements:
+				<a href="http://twitter.com/fancyfootage" class="huge" target="_blank" onclick="ga('send', 'event', 'social', 'ex-click', 'twitter');">
+					@fancyfootage
 				</a>
 			</p>
 		</section>
@@ -67,21 +79,19 @@ loop: thankyou
 	</header>
 	<div class="popup__copy">
 		<div>
-			<h2 class="popup__download">Upload Footage. <span>Get Paid. Get Promoted.</span></h2>
-			<p class="center-text">
-				<strong>Theme</strong>: {{page.theme}}<br>
-				<strong>Deadline</strong>: {{page.deadline}}<br>
-				<strong>Requirements</strong>: Under 15 seconds. Under 100mb<br><br>
-			</p>
+			<h2 class="popup__download">Upload Your Footage!</h2>
 			<p>
-				Footage is uploaded via Dropbox (but you don’t need an account) Every submission that is included in {{page.month}}’s collection will receive a minimum prize of $50! 💰💰💰 <a href="/help">Any Questions?</a>
+				<img alt="Footage submission requirements" src="{{ site.asseturl }}img/requirements.png">
+			</p>
+			<p class="center-text">
+				After submitting this form, we’ll send you a Dropbox link to upload your footage. You do not need a Dropbox account in order to submit. <a href="/help#contributor">Any questions?</a>
 			</p>
 		</div>
 
 		<div>
 			<form class="form--wide" action="//unfold.us8.list-manage.com/subscribe/post?u=cb388a02c76af421ba56300e8&amp;id=12ff986bec" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
 				<p>
-					<label for="mce-NAME">Name *</label>
+					<label for="mce-NAME">Artist Name *</label>
 					<input name="NAME" id="mce-NAME" type="text" placeholder="Fancy Footage Club" required>
 				</p>
 				<p>
@@ -90,7 +100,7 @@ loop: thankyou
 				</p>
 				<p>
 					<label for="sites">
-						Share your website, Instagram, and Twitter to help visitors learn more about you
+						Share your website, Instagram, and Twitter to help visitors learn more about you.
 					</label>
 					<div class="form__input">
 						<input name="WEBSITE" id="mce-WEBSITE" type="url" placeholder="http://fancyfootage.club/">
@@ -111,14 +121,13 @@ loop: thankyou
 				</div><!-- MC bot protection -->
 				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cb388a02c76af421ba56300e8_12ff986bec" tabindex="-1" value=""></div>
 				<div class="clear">
-					<input type="submit" value="Submit & Proceed to Dropbox" name="subscribe" id="mc-embedded-subscribe" class="button">
+					<input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
 				</div>
 			</form>
 			<div class="hushed">
 				<p class="center-text">
 					* indicates a required field.<br><br>
-					Any footage that doesn’t meet the above requirements will not be accepted for the collection.<br>
-					Any and all uploaded footage can be distributed at any time as outlined in our <a href="http://fancyfootage.club/legal/termsofuse.pdf">Terms of Use</a>.
+					You guarantee that you own the rights to any uploaded footage and that all uploaded footage may be distributed to Fancy Footage Club users at any time. Full details should be read before uploading: <a href="http://fancyfootage.club/legal/license.pdf">License.</a>
 				</p>
 			</div>
 		</div>
