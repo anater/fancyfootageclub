@@ -16,14 +16,34 @@
 		});
 	});
 
-	var form = document.getElementById("mc-embedded-subscribe-form");
+	var form = document.getElementById("footage-submit-form");
+	var inputs = form.querySelectorAll("input");
+
 
 	form.addEventListener('submit', function(event) {
-	  event.preventDefault();
-	  ga('send', 'event', 'contributor', 'submit', {
-	    hitCallback: function() {
-	      form.submit();
-	    }
-	  });
+		event.preventDefault();
+
+		for (var i = 0; i < inputs.length; i++) {
+			if(inputs[i].required){
+				if(inputs[i].value == null || inputs[i].value == ""){
+					inputs[i].classList.add('invalid');
+					var invalid = true;
+				}else{
+					inputs[i].classList.remove('invalid');
+					var invalid = false;
+				}
+			}
+		};
+
+		if(invalid == true || invalid == null){
+			return false;
+		}
+		else{
+			ga('send', 'event', 'contributor', 'submit', {
+				hitCallback: function() {
+					form.submit();
+				}
+			});
+		}
 	});
 </script>
