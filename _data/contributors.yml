@@ -1,67 +1,117 @@
 
 001:
     name: Will Start
+    email: willstart92@msn.com
     url: https://vimeo.com/willstart
 002:
     name: Crew of Expedition 42
-    url: http://eol.jsc.nasa.gov/ForFun/CrewEarthObservationsVideos/
+    email: '#'
+    url: http://eol.jsc.nasa.gov/ForFun/CrewEarthObservationsVideos
 003:
     name: Nelson Ramm
+    email: visonicmedia@gmail.com
     url: https://instagram.com/nelsonramm
+    instagram: nelsonramm
 004:
     name: Graham Sicalowski
-    url: mailto:Graham@cloudhousemedia.co
+    email: graham@cloudhousemedia.co
+    url: http://cloudhousemedia.co
 005:
     name: Fancy Footage Club
+    email: contribute@fancyfootage.club
     url: http://fancyfootage.club
+    instagram: fancyfootageclub
+    twitter: fancyfootage
 006:
     name: Matthew Thompson
+    email: mtodoking@gmail.com
     url: https://www.youtube.com/channel/UC-SDt-87LOx2rtT1dDqxQjw
+    instagram: matthomp
+    twitter: sonofathom
 007:
     name: Christian Sautter
+    email: thechristiansautter@gmail.com
     url: https://vimeo.com/christiansautter
 008:
     name: Brent Buffington
+    email: brent@brentbuffington.com
     url: http://brentbuffington.com
+    instagram: thebuffington
+    twitter: thebuffington
 009:
     name: Tina Messina
+    email: caswelltina23@gmail.com
     url: http://www.tinamessinaproductions.com
+    instagram: tina.messina
 010:
     name: Alex Wolf
+    email: alexandrawolf.us@gmail.com
     url: http://www.alexthewolf.com
+    instagram: alexwolfdoes
 011:
     name: Paxeros Creative
+    email: hello@paxeroscreative.com
     url: http://paxeroscreative.com
+    instagram: paxeroscreative
+    twitter: paxeroscreative
 012:
     name: Alexia Adana
-    url: http://www.alexiaadana.com/
+    email: hello@alexiaadana.com
+    url: http://www.alexiaadana.com
+    instagram: alexiaadana
+    twitter: alexiaadana
 013:
     name: Andrew Nater
+    email: andrew@fancyfootage.club
     url: http://instagram.com/anater
+    instagram: anater
+    twitter: a_nater
 014:
     name: Kevin HG
+    email: kevin@fancyfootage.club
     url: http://kevinhg.com
+    instagram: kevhg
+    twitter: kevhg_
 015:
     name: Laura Jansen
-    url: http://www.laurajansendp.com/
+    email: ljansen271@gmail.com
+    url: http://www.laurajansendp.com
+    instagram: laurajansendp
+    twitter: laurajansendp
 016:
     name: Myles Kramer
+    email: myleskramer@gmail.com
     url: http://linkedin.com/in/myleskramer
+    instagram: MylesKramer
+    twitter: MylesKramer
 017:
     name: Unfold
-    url: http://unfold.ws/
+    email: info@unfold.ws
+    url: http://unfold.ws
 018:
     name: Chris Whitaker
+    email: whitaphoto@gmail.com
     url: http://www.whitaphoto.com
+    instagram: Whitaphoto
+    twitter: Whitaphoto
 019:
     name: Audio Stranger
+    email: '#'
     url: https://twitter.com/audiostranger
 020:
     name: Mitch Martinez
-    url: http://mitchmartinez.com/
+    email: mitch@mitchmartinez.com
+    url: http://mitchmartinez.com
+    instagram: mitchmartinez_dop
+    twitter: cinemitch_dop
 021:
     name: Nico Marks
-    url: https://instagram.com/nicomarksvisuals
+    email: nicomarksfilms@gmail.com
+    url: http://www.anmohh.com
+    instagram: nicomarksvisuals 
+    twitter: nicomarks
 022:
     name: Ian Watt
-    url: http://http://www.culturecreator.co
+    email: ian@culturecreator.co
+    url: http://www.culturecreator.co
+    instagram: iangwatt
