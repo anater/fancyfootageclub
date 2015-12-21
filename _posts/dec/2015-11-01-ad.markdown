@@ -1,0 +1,14 @@
+---
+layout: post
+type: preview
+
+loop: ad
+sponsor: 003
+title: "Sponsor a Collection!"
+description: "Get in front of highly engaged designers, developers, filmmakers, and marketers from around the world."
+cta_text: "Learn about sponsorships!"
+ad_url: /sponsor
+category: December
+
+is_ad: true
+---

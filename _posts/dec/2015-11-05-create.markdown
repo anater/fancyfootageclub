@@ -1,0 +1,10 @@
+---
+layout: post
+type: preview
+
+loop: create
+contributor: 022
+location: ""
+tags: desk drawing photography indoors
+category: December
+---

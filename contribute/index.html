@@ -1,90 +1,140 @@
 ---
 layout: default
-title: "Get exposure & make money off your footage - Submit Footage"
-loop: contribute
+type: contributor
+title: "Upload Footage. Get Paid. Get Promoted."
+loop: thankyou
+
+month: January
+theme: Celebration
+theme-ex: "🎉 🙌 🍻"
+deadline: "December 31, 2015"
+loop: thankyou
 ---
+
 <main>
-	<article class="feature">
+	<article class="contribute">
 		<header class="headline">
-			<div class="headline__text v-center">
-				<h1>Shoot Footage.<span>Get Paid. Get Promoted.</span></h1>
-				<h3>We curate, purchase, and promote the fanciest stock footage on the web.</h3>
+			<div class="headline__text">
+				<h1>
+					We believe you should <span>be paid for your footage.</span>
+				</h1>
+				<h3>
+					You’ll earn cash and direct exposure to thousands of creatives <span>when your footage is featured in our library.</span>
+				</h3>
 			</div>
 		</header>
-		<section class="bg-secondary dark">
-			<div class="feature__icon">
-				<img alt="Curated" class="v-center" src="/assets/img/animated/contribute-funnel.gif">
-			</div>
-			<div class="feature__text v-center">
-				<h2 class="dark">We Curate Every Clip</h2>
-				<p>	
-					Your clips will never get lost in a sea of content. We host the best and only the best. So if someone is looking for a loop of coffee brewing, they know they can find the best loop of coffee brewing (your loop of coffee brewing).
-				</p>
-			</div>
-		</section>
-		<section class="bg-primary white">
-			<div class="feature__icon">
-				<img alt="Promoted" class="v-center" src="/assets/img/animated/contribute-star.gif">
-			</div>
-			<div class="feature__text v-center">
-				<h2 class="white">You Are Always Promoted</h2>
-				<p>	
-					We never separate your content from your name. Financial and creative fulfillment are only one part of the equation. Most stock footage sites are insular — footage by filmmakers, for filmmakers. Fancy Footage Club places your work directly in front of engaged, professional designers. 
-				</p>
-			</div>
-		</section>
-		<section class="bg-secondary dark">
-			<div class="feature__icon">
-				<img alt="Paid" class="v-center" src="/assets/img/animated/contribute-money.gif">
-			</div>
-			<div class="feature__text v-center">
-				<h2 class="dark">You Get Paid Immediately</h2>
-				<p>	
-					We are the only site that will pay you for your stock footage now. Have some old footage lying around that you think is stellar? Make it loop, kick it our way, and get a few extra bucks towards that lens you know you want. 
-				</p>
-			</div>
-		</section>
-		<section class="bg-light">
-			<div class="feature__icon">
-				<img alt="Community" class="v-center" src="/assets/img/animated/contribute-reel.gif">
-			</div>
-			<div class="feature__text v-center">
-				<h2>We're Focused On Community</h2>
-				<p>	
-					We are a tight-knit community of filmmakers and designers. Our goal is simple: to promote better creative work. For the designers, that involves finding the best footage, and for you that means fair compensation and promotion so you can keep doing what you love.
-				</p>
-			</div>
-		</section>
-		<section class="form-container">
-  		<!-- Begin MailChimp Signup Form -->
-		<div id="mc_embed_signup" class="feature__form v-center"> 
-			<p>It’s good to be a contributor. Send us your work.</p>
-			<form action="//unfold.us8.list-manage.com/subscribe/post?u=cb388a02c76af421ba56300e8&amp;id=12ff986bec" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-				<div id="mc_embed_signup_scroll">
-					<div class="mc-field-group">
-						<input type="email" placeholder="Email Address" name="EMAIL" class="required email" id="mce-EMAIL">
-					</div>
-					<div class="mc-field-group">
-						<input type="url" placeholder="Link to portfolio, reel, etc" name="MMERGE1" class=" url" id="mce-MMERGE1">
-					</div>
-					<div id="mce-responses" class="clear">
-						<div class="response" id="mce-error-response" style="display:none"></div>
-						<div class="response" id="mce-success-response" style="display:none"></div>
-					</div>
-					<div style="position: absolute; left: -5000px;">
-						<input type="text" name="b_cb388a02c76af421ba56300e8_12ff986bec" tabindex="-1" value="">
-					</div>
-				    <div class="clear">
-				    	<button id="mc-embedded-subscribe" class="button">Submit</button>
-				    </div>
+		
+		<section class="contribute__main">
+			<div class="top-curve bg-dark"></div>
+			<div class="bg-dark">
+				<div class="container">
+					<h2 class="center-text">How It Works</h2>
+					<p>Fancy Footage Club features snippets of footage from excellent video artists and shares their work with thousands of designers, filmmakers, marketers, and entrepreneurs. We feature 5 footage loops every month - purchased at $50 -  in order to maximize exposure to the artists. The goal is to give artists a space to try something new or promote outstanding work that would otherwise live on the cutting room floor.</p>
 				</div>
-			</form>
-			<p class="hushed">
-  				All correspondence is done via email.
-  				<br>Please provide your primary email.
-  			</p>
-		</div>
-		<!--End mc_embed_signup-->
+				<div class="container">
+					<div class="center-text">
+						<h2>{{page.month}}'s Theme Is {{page.theme}}</h2>
+						<br>
+						<p class="emoji">
+							{{page.theme-ex}}
+						</p>
+					</div>
+					<p>
+						We’ve been around for one year! So, we felt it was only appropriate to make our first open submission theme <em>celebration</em>. We’re hoping to highlight the excitement, joy, and endless possibility of a new year. Bring your camera to a bumpin’ party or dive into a dusty hard drive for that perfect shot. Can’t wait to see what you come up with! 
+					</p>
+					<div class="center-text">	
+						<button class="button button-primary" id="formTrigger" onclick="ga('send', 'event', 'contribute', 'click', 'trigger-form');">
+							Submit Your {{page.theme}} Footage!
+						</button>
+						<p>
+							Submission period ends on {{page.deadline}}.
+						</p>
+						<p class="hushed">
+							<a href="/help#quality">What does great footage look like?</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-curve bg-dark"></div>
+		</section>
+		
+		<section class="cta">
+			<p class="cta--sentence">
+				Follow us on Twitter for updates and announcements:
+				<a href="http://twitter.com/fancyfootage" class="huge" target="_blank" onclick="ga('send', 'event', 'social', 'ex-click', 'twitter');">
+					@fancyfootage
+				</a>
+			</p>
 		</section>
 	</article>
 </main>
+
+<section class="popup popup--long popup--hidden">
+	<header class="popup__header">
+		<h1 class="logo">
+			<a href="/">
+				<img alt="Fancy Footage Club" src="{{ site.asseturl }}img/ffc_logotype.svg"/>
+			</a>
+		</h1>
+	</header>
+	<div class="popup__copy">
+		<div>
+			<h2 class="popup__download">Upload Your Footage!</h2>
+			<p>
+				<img alt="Footage submission requirements" src="{{ site.asseturl }}img/requirements.png">
+			</p>
+			<p class="center-text">
+				After submitting this form, we’ll send you a Dropbox link to upload your footage. You do not need a Dropbox account in order to submit. <a href="/help#contributor">Any questions?</a>
+			</p>
+		</div>
+
+		<div>
+			<form class="form--wide" action="//unfold.us8.list-manage.com/subscribe/post?u=cb388a02c76af421ba56300e8&amp;id=12ff986bec" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+				<p>
+					<label for="mce-NAME">Artist Name *</label>
+					<input name="NAME" id="mce-NAME" type="text" placeholder="Fancy Footage Club" required>
+				</p>
+				<p>
+					<label for="mce-EMAIL">Contact Email *</label>
+					<input name="EMAIL" id="mce-EMAIL" type="email" placeholder="info@fancyfootage.club" required>
+				</p>
+				<p>
+					<label for="sites">
+						Share your website, Instagram, and Twitter to help visitors learn more about you.
+					</label>
+					<div class="form__input">
+						<input name="WEBSITE" id="mce-WEBSITE" type="url" placeholder="http://fancyfootage.club/">
+						<i class="fa fa-globe form__in-label"></i>
+					</div>
+					<div class="form__input">
+						<input name="INSTA" id="mce-INSTA" placeholder="@fancyfootageclub">
+						<i class="fa fa-instagram form__in-label"></i>
+					</div>
+					<div class="form__input">	
+						<input name="TWITTER" id="mce-TWITTER" placeholder="@FancyFootage">
+						<i class="fa fa-twitter form__in-label"></i>
+					</div>
+				</p>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div><!-- MC bot protection -->
+				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cb388a02c76af421ba56300e8_12ff986bec" tabindex="-1" value=""></div>
+				<div class="clear">
+					<input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
+				</div>
+			</form>
+			<div class="hushed">
+				<p class="center-text">
+					* indicates a required field.<br><br>
+					You guarantee that you own the rights to any uploaded footage and that all uploaded footage may be distributed to Fancy Footage Club users at any time. Full details should be read before uploading: <a href="http://fancyfootage.club/legal/license.pdf">License.</a>
+				</p>
+			</div>
+		</div>
+
+		<a class="popup__exit">
+			<i class="fa fa-times"></i> 
+		</a>
+	</div>
+	{% include components/footer-full.html %}
+</section>

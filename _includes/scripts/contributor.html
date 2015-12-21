@@ -1,5 +1,5 @@
 <script>
-	var button = document.querySelector('.button-secondary');
+	var button = document.querySelector('#formTrigger');
 	var popup = document.querySelector('.popup');
 	var exitPopup = popup.querySelector('.popup__exit');
 	var body = document.querySelector('body');
@@ -14,5 +14,16 @@
 				popup.classList.add('popup--hidden');
 			})
 		});
+	});
+
+	var form = document.getElementById("mc-embedded-subscribe-form");
+
+	form.addEventListener('submit', function(event) {
+	  event.preventDefault();
+	  ga('send', 'event', 'contributor', 'submit', {
+	    hitCallback: function() {
+	      form.submit();
+	    }
+	  });
 	});
 </script>

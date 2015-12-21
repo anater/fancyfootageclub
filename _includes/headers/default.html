@@ -6,9 +6,19 @@
 </div>
 
 <header>
-  <h1 class="logo">
-    <a href="/">
-      <img alt="Fancy Footage Club" src="{{ site.asseturl }}img/ffc_logotype.svg"/>
-    </a>
-  </h1>
+	{% if page.announcement == true %}
+		<div class="announcement">
+			<a href="/contribute" target="_blank" onclick="ga('send', 'event', 'link', 'click', 'submit footage');">
+				<div class="bg-secondary">
+					<p class="center-text">You can now submit footage for January’s collection! <strong>Learn More</strong></p>
+				</div>
+				<div class="bottom-curve bg-secondary"></div>
+			</a>
+		</div>
+	{% endif %}
+	<h1 class="logo">
+		<a href="/">
+		  <img alt="Fancy Footage Club" src="{{ site.asseturl }}img/ffc_logotype.svg"/>
+		</a>
+	</h1>
 </header>

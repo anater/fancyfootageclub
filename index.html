@@ -2,6 +2,8 @@
 layout: default
 title: "Cinema-quality footage for creative projects of every size - Welcome"
 loop: home
+
+announcement: true
 ---
 {% assign month = site.data.collection.month %}
 <main>
@@ -26,7 +28,7 @@ loop: home
 						{% if post.url %}
 							{% if post.is_ad != true %}
 							<li class="collection__item" onclick="ga('send', 'event', 'clip', 'click', '{{ filename }}');">
-								<a href="{{ post.url }}">
+								<a href="{{ post.url }}" target="_blank">
 				  					<img src="{{ site.asseturl }}img/{{ filename }}-small.jpg">
 				  					<p>by {{ site.data.contributors[post.contributor].name }}</p>
 				 				</a>
@@ -49,10 +51,11 @@ loop: home
 			<div class="bottom-curve bg-dark"></div>
 		</section>
 		<section class="form-container">
-			<div class="v-center">
-				<p>Want More Loops? Get bonus footage in your inbox every month.</p>
-				{% include components/subscribe-form.html %}
-			</div>
+			<h2>Tired of downloading loops one by one?</h2>
+			<p>
+				Join our newsletter for a convenient way to download next month's collection. 
+			</p>
+			{% include components/subscribe-form.html %}
 		</section>
 	</article>
 </main>

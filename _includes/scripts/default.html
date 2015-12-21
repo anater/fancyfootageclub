@@ -67,9 +67,9 @@
 			newItem.classList.add('collection__item');
 		}else{
 			newItem.classList.add('collection__item', 'ad');
-			itemLink.target = "_blank";
 		}
 		itemLink.href = data.url;
+		itemLink.target = "_blank"
 		itemImg.src = "{{ site.asseturl }}img/" + data.filename + "-small.jpg";
 		itemImg.onload = console.log('loaded');
 		itemP.innerHTML = "by " + data.name;
