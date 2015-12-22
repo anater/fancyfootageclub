@@ -1589,13 +1589,19 @@ input + label{
 	margin: 2em 0 1em;
 }
 
-.form--wide input{
+.form--wide input:not(input[type="checkbox"]){
 	width: 100%;
 	text-align: center;
 }
 
 .form--wide input + input{
 	margin-top: 1em;
+}
+
+.form--wide input[type="checkbox"]{
+	font-size: 2em;
+	margin-top: 1em;
+	margin-right: .5em;
 }
 
 .form__input{
