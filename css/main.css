@@ -1566,7 +1566,7 @@ legend {
 
 input, 
 textarea {
-	width: auto;
+	width: 100%;
 	color: #333;
 	border: none;
 	opacity: .8;
@@ -1581,6 +1581,10 @@ textarea {
 		opacity: 1;
 		color: black;
 	}
+
+input[type="checkbox"]{
+	width: auto;
+}
 
 input{
 	font-family: "proxima-nova",sans-serif;
@@ -1640,8 +1644,7 @@ input + label{
 	margin: 2em 0 1em;
 }
 
-.form--wide input:not(input[type="checkbox"]){
-	width: 100%;
+.form--wide input{
 	text-align: center;
 }
 

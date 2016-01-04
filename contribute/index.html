@@ -46,9 +46,6 @@ loop: thankyou
 						<button class="button button-primary" id="formTrigger" onclick="ga('send', 'event', 'contribute', 'click', 'trigger-form');">
 							Submit Your {{page.theme}} Footage!
 						</button>
-						<p>
-							Submission period ends on {{page.deadline}}.
-						</p>
 						<p class="hushed">
 							<a href="/help#quality">What does great footage look like?</a>
 						</p>
@@ -89,7 +86,7 @@ loop: thankyou
 		</div>
 
 		<div>
-			<form class="form--wide" action="http://formspree.io/admin@fancyfootage.club" method="post" id="footage-submit-form" name="footage-submit-form">
+			<form class="form--wide" action="" method="post" id="footage-submit-form" name="footage-submit-form">
 				<p>
 					<label for="NAME">Artist Name *</label>
 					<input name="NAME" id="NAME" type="text" placeholder="Fancy Footage Club" required>
@@ -121,7 +118,7 @@ loop: thankyou
 				<input type="hidden" name="_next" value="https://www.dropbox.com/request/b66Tu0zvoDe3WpveqyvI"/>
 				<input type="text" name="_gotcha" style="display:none" />
 				<div class="clear">
-					<input type="submit" value="Submit & Proceed to Dropbox" name="subscribe" id="mc-embedded-subscribe" class="button">
+					<input type="submit" value="Submit & Proceed to Dropbox" name="subscribe" id="mc-embedded-subscribe" class="button" disabled>
 				</div>
 			</form>
 			<div class="hushed">
