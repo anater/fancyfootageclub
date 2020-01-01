@@ -1,6 +1,10 @@
 {
   "name": "ffc",
   "version": "0.1.0",
+  "scripts": {
+    "start": "grunt watch & jekyll serve",
+    "build": "grunt && jekyll build"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "^3.0.1",
