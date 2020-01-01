@@ -5,7 +5,7 @@ description: 'Cinema-quality footage for creative projects of every size'
 baseurl: ""
 dlurl: "https://s3.amazonaws.com/fancyfootageclips/loops/"
 asseturl: "https://s3.amazonaws.com/fancyfootageclips/website/"
-url: "http://fancyfootage.club" 
+url: "" 
 
 exclude: ['css/src', 'package.json', '/node_modules', 'gruntfile.js', 'npm-debug.log']
 
